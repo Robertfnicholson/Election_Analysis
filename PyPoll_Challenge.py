@@ -28,7 +28,6 @@ winning_count = 0
 winning_percentage = 0
 
 # 2: Track the largest county and county voter turnout.
-# "" change name to largest_county_turnout and largest_county_vote
 largest_county_turnout = ""
 largest_county_vote = 0
 
@@ -47,7 +46,6 @@ with open(file_to_load) as election_data:
         # Get the candidate name from each row.
         candidate_name = row[2]
         # 3: Extract the county name from each row.
-        # "" change to county_name
         county_name = row[1]
 
         # If the candidate does not match any existing candidate add it to
@@ -62,7 +60,6 @@ with open(file_to_load) as election_data:
 
         # 4a: Write an if statement that checks that the
         # county does not match any existing county in the county list.
-        # "" change to county_name and county_names
         if county_name not in county_names:
             # 4b: Add the existing county to the list of counties.
             county_names.append(county_name)
@@ -88,7 +85,8 @@ with open(file_to_save, "w") as txt_file:
     txt_file.write(election_results)
 
     # 6a: Write a for loop to get the county from the county dictionary.
-    #Neededto add county as a variable
+    #Used code from from sierrah154, "PyPoll_Challenge.py "https://github.com/sierrah154/Election_Analysis/blob/f041d05fea9ef13d25ac3a9d3ce3f0245018bb2e/PyPoll_challenge.py"
+    # from GitHub. Needed to add county as a variable
     for county in county_votes:
         # 6b: Retrieve the county vote count.
         # corrected from c_votes = counties_votes.get(counties_name)
@@ -96,24 +94,26 @@ with open(file_to_save, "w") as txt_file:
         county_vote = county_votes[county]
 
         # 6c: Calculate the percentage of votes for the county.
-        # changed type from float to int
         county_percent = int(county_vote)/int(total_votes) * 100
         county_results = (
             f"{county}: {county_percent:.1f}% ({county_vote:,})\n"
         )
         # 6d: Print the county results to the terminal.
-        # I had txt.file. Should be text_file
+        # Used code from from sierrah154, "PyPoll_Challenge.py "https://github.com/sierrah154/Election_Analysis/blob/f041d05fea9ef13d25ac3a9d3ce3f0245018bb2e/PyPoll_challenge.py"
+        # from GitHub. I had txt.file. Should be text_file
         print(county_results, end="")
         # 6e: Save the county votes to a text file.
         txt_file.write(county_results)
          # 6f: Write an if statement to determine the winning county and get its vote count.
-        # needed to change condition, eliminate "and"
+        # Used code from from sierrah154, "PyPoll_Challenge.py "https://github.com/sierrah154/Election_Analysis/blob/f041d05fea9ef13d25ac3a9d3ce3f0245018bb2e/PyPoll_challenge.py"
+        # from GitHub. I needed to change condition, eliminate "and"
         if (county_vote > largest_county_vote):
             largest_county_vote = county_vote
             largest_county_turnout = county
 
     # 7: Print the county with the largest turnout to the terminal.
-    # Code help me find a capital P in Print
+    # Used code from from sierrah154, "PyPoll_Challenge.py "https://github.com/sierrah154/Election_Analysis/blob/f041d05fea9ef13d25ac3a9d3ce3f0245018bb2e/PyPoll_challenge.py"
+    # from GitHub. Code help me find a capital P in Print
     largest_county_turnout = (
         f"-------------------------\n"
         f"Largest County Turnout: {largest_county_turnout}\n"
@@ -124,12 +124,11 @@ with open(file_to_save, "w") as txt_file:
     txt_file.write(largest_county_turnout)
 
     # Save the final candidate vote count to the text file.
-    # "" change from candidate_name to candidate
     for candidate in candidate_votes:
 
         # Retrieve vote count and percentage
-        # change candidate_name to candidate and eliminated get
-        # change from parenthesis to brackets
+        # Used code from from sierrah154, "PyPoll_Challenge.py "https://github.com/sierrah154/Election_Analysis/blob/f041d05fea9ef13d25ac3a9d3ce3f0245018bb2e/PyPoll_challenge.py"
+        # from GitHub. Change from parenthesis to brackets
         votes = candidate_votes[candidate]
         vote_percentage = int(votes) / int(total_votes) * 100
         candidate_results = (
@@ -142,7 +141,6 @@ with open(file_to_save, "w") as txt_file:
         txt_file.write(candidate_results)
 
         # Determine winning vote count, winning percentage, and candidate.
-        #change chandidate_name to candidate
         if (votes > winning_count) and (vote_percentage > winning_percentage):
             winning_count = votes
             winning_candidate = candidate
