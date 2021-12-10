@@ -39,6 +39,5 @@ use of our code to audit other congressional districts and senatorial districts 
 code can be modified to be used for other elections. This would include changing the breakdown by 
 counties to a breakdown required for senatorial districts and for local elections. This would also include 
 changing the code to allow for the opening and reading of csv files that would contain the data for the 
-other elections.   
-.</p>
+other elections.</p>
 
