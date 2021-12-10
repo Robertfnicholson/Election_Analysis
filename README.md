@@ -7,7 +7,7 @@ tabulated results of the U.S. Congressional precinct in Colorado. I was tasked w
 number of votes cast, the total number of votes for each candidate, the percentage of votes for each 
 candidate, the winner of the election based on the popular vote, the voter turnout for each county, the 
 percentage of votes from each county of the total count and the county with the highest voter turnout. I 
-used Python to automate the process and the resulting code could be used for used to audit not only other 
+used Python to automate the process and the resulting code could be used to audit not only other 
 congressional districts but also senatorial districts and local elections. </p>
 
 ## Election-Audit Results:
