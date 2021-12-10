@@ -11,11 +11,26 @@ used Python to automate the process and the resulting code could be used for use
 congressional districts but also senatorial districts and local elections. </p>
 
 ## Election-Audit Results:
-The election-audit report is as follows:
+The election-audit report is provided below:
 
-![election_analysis](https://github.com/Robertfnicholson/Election_Analysis/blob/2b44e5238b0a7a9bc9599f894b1f6e72be48a608/election_analysis.txt)
-
-
+	-------------------------
+	Total Votes: 369,711
+	-------------------------
+	County Votes:
+	Jefferson: 10.5% (38,855)
+	Denver: 82.8% (306,055)
+	Arapahoe: 6.7% (24,801)
+	-------------------------
+	Largest County Turnout Denver
+	-------------------------
+	Charles Casper Stockham: 23.0% (85,213)
+	Diana DeGette: 73.8% (272,892)
+	Raymon Anthony Doane: 3.1% (11,606)
+	-------------------------
+	Winner: Diana DeGette
+	Winning Vote Count: 272,892
+	Winning Percentage: 73.8%
+	-------------------------
 
 ## Election-Audit Summary
 Tom and I successfully built and implemented Python code that automated an election audit, converting 
