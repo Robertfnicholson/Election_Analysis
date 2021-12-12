@@ -11,26 +11,35 @@ used Python to automate the process and the resulting code could be used to audi
 congressional districts but also senatorial districts and local elections. </p>
 
 ## Election-Audit Results:
-The election-audit report is provided below:
+The Election-Audit results were generated using Python code. The results are as follows:
 
-	-------------------------
-	Total Votes: 369,711
-	-------------------------
-	County Votes:
-	Jefferson: 10.5% (38,855)
-	Denver: 82.8% (306,055)
-	Arapahoe: 6.7% (24,801)
-	-------------------------
-	Largest County Turnout Denver
-	-------------------------
-	Charles Casper Stockham: 23.0% (85,213)
-	Diana DeGette: 73.8% (272,892)
-	Raymon Anthony Doane: 3.1% (11,606)
-	-------------------------
-	Winner: Diana DeGette
-	Winning Vote Count: 272,892
-	Winning Percentage: 73.8%
-	-------------------------
+* Total votes cast in the election was 369,711.
+* The county votes were as follows: 
+	* Jefferson, 10.5% (38,855); 
+	* Denver: 82.8% (306,055), and 
+	* Arapahoe: 6.7% (24,801).
+* The largest county turnout was Denver.
+* Charles Casper Stockham received 85,213 votes or 23.0%.
+* Diana DeGette received 272,892 votes or 73.8%.
+* Raymon Anthony Doane received 11,606 votes or 3.1%.
+* The election winner was Diana DeGette.
+* Her winning vote count was 272,892.
+* Her winning vote percentage was 73.8%.
+
+We used a for loop in our code to loop through each row of the election_results.csv file and added a total 
+vote counter and variables to count the votes from each county and from each candidate. See screenshot of code 
+below.
+
+![Python_code1.png](https://github.com/Robertfnicholson/Election_Analysis/blob/52f527b63c3f00d7483a2d7cccfd31866b084680/Python_code1.png)
+</p>
+
+## Challenges
+We encountered a series of challenges in developing the code. This included not having the correct conditional 
+statement. We found source code in GitHub from an earlier class student who dropped the "and" condition to 
+determine the largest county turnout, resulting in the following code:
+
+![Python_code2.png](https://github.com/Robertfnicholson/Election_Analysis/blob/52f527b63c3f00d7483a2d7cccfd31866b084680/Python_code2.png)
+</p>
 
 ## Election-Audit Summary
 Tom and I successfully built and implemented Python code that automated an election audit, converting 
