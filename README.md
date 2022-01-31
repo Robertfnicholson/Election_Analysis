@@ -11,7 +11,7 @@ used Python to automate the process and the resulting code could be used to audi
 congressional districts but also senatorial districts and local elections. </p>
 
 ## Election-Audit Results:
-The Election-Audit results were generated using Python code. The results are as follows:
+The Election-Audit results were generated using Python code. See "PyPoll_Challenge.py" file. The results are as follows:
 
 * Total votes cast in the election was 369,711.
 * The county votes were as follows: 
